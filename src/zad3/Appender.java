@@ -8,11 +8,31 @@ package zad3;
 
 
 public class Appender {
-    public Appender(String ala) {
+    String src;
+
+    public Appender()
+    {
+        src = "";
+    }
+
+    public Appender(String s)
+    {
+        src = s;
+    }
+
+    public Appender append(String app, int n)
+    {
+        if (n<=0) throw new IllegalArgumentException("Parametr n musi być większy od 0");
+        while(n-- >0)
+        {
+            src = src + app;
+        }
+        return this;
 
     }
 
-    public Appender append(String s, int i) {
-        return null;
+    public String toString()
+    {
+        return src;
     }
 }
