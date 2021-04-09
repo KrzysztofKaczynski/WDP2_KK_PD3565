@@ -2,7 +2,9 @@ package zad2;
 
 public class BankCustomer {
 
-    public BankCustomer(Person alaP) {
+    public BankCustomer(Person p) {
 
     }
+
+
 }
