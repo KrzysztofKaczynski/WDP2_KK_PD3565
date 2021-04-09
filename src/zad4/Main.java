@@ -7,6 +7,8 @@
 package zad4;
 
 
+import java.util.Scanner;
+
 import static javax.swing.JOptionPane.*;
 
 public class Main {
