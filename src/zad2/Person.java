@@ -2,10 +2,12 @@ package zad2;
 
 public class Person {
     private String name = "";
-    private String person;
 
-    public Person(String Person) {
+    public Person(String inName) {
+        name = inName;
+    }
 
-        person = Person;
+    public String getName() {
+        return name;
     }
 }
