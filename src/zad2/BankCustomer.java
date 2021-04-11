@@ -9,13 +9,13 @@ public class BankCustomer {
         person = p;
     }
 
+
     public Account getAccount() {
         return account;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return String.format("Klient: %s stan konta %1.2f", person.getName(), account.getBalance());
     }
 
