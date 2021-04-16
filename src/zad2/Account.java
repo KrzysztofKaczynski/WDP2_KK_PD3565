@@ -19,7 +19,7 @@ public class Account {
         if (cash > balance) {
             cash = balance;
         }
-            balance -= cash;
+        balance -= cash;
        return cash;
     }
 
