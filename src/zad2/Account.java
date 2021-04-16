@@ -18,8 +18,8 @@ public class Account {
     public double withdraw(double cash) {
         if (cash > balance) {
             cash = balance;
-        }else if (cash < balance) throw new IllegalArgumentException("nie ma srodków" + balance);
-       // balance -= cash;
+        }
+            balance -= cash;
        return cash;
     }
 
