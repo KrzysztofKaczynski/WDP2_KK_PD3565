@@ -11,19 +11,19 @@ public class Account {
         return balance;
     }
 
-    public void deposit (double cash) {
+    public void deposit(double cash) {
         balance += cash;
     }
 
-    public double withdraw (double cash) {
+    public double withdraw(double cash) {
         if (cash > balance) {
             cash = balance;
-        }
-        balance -= cash;
-        return cash;
+        }else if (cash < balance) throw new IllegalArgumentException("nie ma srodków" + balance);
+       // balance -= cash;
+       return cash;
     }
 
-    public static void setInterestRate (double v) {
+    public static void setInterestRate(double v) {
         interestRate = v;
     }
 
@@ -34,7 +34,6 @@ public class Account {
     public void addInterest() {
         balance = balance * (100 + interestRate) / 100;
     }
-
 
 
 }
