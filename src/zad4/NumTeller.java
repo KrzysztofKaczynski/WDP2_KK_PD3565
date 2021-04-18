@@ -61,7 +61,6 @@ public class NumTeller {
         } else if (liczba % 10 == 9) {
             msg += "ty";
         }
-
         return msg;
     }
 

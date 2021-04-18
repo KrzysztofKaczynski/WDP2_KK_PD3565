@@ -51,7 +51,6 @@ public class Zbiornik {
         return "Zbiornik nr " + numer + ", pojemnosc " + pojemnosc + ", stan wody " + stanWody;
     }
 
-    //public void show() {
-      //  System.out.println(this);
-    }
+
+}
 
