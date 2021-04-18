@@ -7,63 +7,64 @@ package zad4;
 
 public class NumTeller {
 
-    public static String say(int numb) {
-        String msg = numb + "-";
+    public static String say(int liczba) {
+        String msg = liczba + "-";
 
-        if (numb < 0) numb = -numb;
+        if (liczba < 0) liczba = -liczba;
 
-        if (numb % 10 == 0) {
+        if (liczba % 10 == 0) {
 
-            if (numb == 0)
+            if (liczba == 0)
                 msg += "owy";
 
-            else if (numb % 1000000 == 0)
+            else if (liczba % 1000000 == 0)
                 msg += "owy";
 
-            else if (numb % 1000 == 0)
+            else if (liczba % 1000 == 0)
                 msg += "ny";
 
-            else if (numb % 100 == 0)
+            else if (liczba % 100 == 0)
                 msg += "ny";
 
             else msg += "ty";
-        } else if (numb % 10 == 1) {
+        } else if (liczba % 10 == 1) {
 
-            if (numb % 100 == 11)
+            if (liczba % 100 == 11)
                 msg += "ty";
 
             else msg += "szy";
-        } else if (numb % 10 == 2) {
+        } else if (liczba % 10 == 2) {
 
-            if (numb % 100 == 2)
+            if (liczba % 100 == 2)
                 msg += "gi";
 
             else msg += "gi";
-        } else if (numb % 10 == 3) {
+        } else if (liczba % 10 == 3) {
 
-            if (numb % 100 == 13)
+            if (liczba % 100 == 13)
                 msg += "ty";
             else msg += "ci";
-        } else if (numb % 10 == 4) {
+        } else if (liczba % 10 == 4) {
             msg += "ty";
-        } else if (numb % 10 == 5) {
+        } else if (liczba % 10 == 5) {
             msg += "ty";
-        } else if (numb % 10 == 6) {
+        } else if (liczba % 10 == 6) {
             msg += "ty";
-        } else if (numb % 10 == 7) {
-            if (numb % 100 == 7)
+        } else if (liczba % 10 == 7) {
+            if (liczba % 100 == 7)
                 msg += "ty";
             else msg += "my";
-        } else if (numb % 10 == 8) {
-            if (numb % 100 == 8)
+        } else if (liczba % 10 == 8) {
+            if (liczba % 100 == 8)
                 msg += "ty";
             else msg += "my";
-        } else if (numb % 10 == 9) {
+        } else if (liczba % 10 == 9) {
             msg += "ty";
         }
 
         return msg;
     }
+
 }
 
 

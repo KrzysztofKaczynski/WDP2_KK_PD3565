@@ -1,7 +1,5 @@
 /**
- *
- *  @author Kaczyński Krzysztof PD3565
- *
+ * @author Kaczyński Krzysztof PD3565
  */
 
 package zad1;
@@ -9,46 +7,51 @@ package zad1;
 
 public class Zbiornik {
 
-    private double pojemnosc=0;
-    private double stanWody=0;
-    private static int lot =0;
-    private int number=0;
+    private double pojemnosc = 0;
+    private double stanWody = 0;
+    private static int next = 0;
+    private final int numer;
 
     public Zbiornik() {
-        number=++lot;
+        numer = ++next;
     }
 
     public Zbiornik(double y, double x) {
         pojemnosc = y;
         stanWody = x;
-        number=++lot;
+        numer = ++next;
     }
 
     public Zbiornik(double x) {
-        this(x,0);
+        this(x, 0);
     }
 
     public Zbiornik(Zbiornik z) {
-        pojemnosc=z.pojemnosc;
-        stanWody=z.stanWody;
-        number=++lot;
+        pojemnosc = z.pojemnosc;
+        stanWody = z.stanWody;
+        numer = ++next;
     }
 
     public void dolej(double water) {
-        stanWody+=water;
-        if (stanWody>pojemnosc) {stanWody=pojemnosc;}
+        stanWody += water;
+        if (stanWody > pojemnosc) {
+            stanWody = pojemnosc;
+        }
 
     }
+
     public void odlej(double water) {
-        stanWody-=water;
-        if (stanWody<0) {stanWody=0;}
+        stanWody -= water;
+        if (stanWody < 0) {
+            stanWody = 0;
+        }
     }
 
-    public String toString()  {
-        return "Zbiornik nr "+number+", pojemnosc "+pojemnosc+", stan wody "+stanWody;
-    }
-    public void show() {
-        System.out.println(toString());
+    public String toString() {
+        return "Zbiornik nr " + numer + ", pojemnosc " + pojemnosc + ", stan wody " + stanWody;
     }
 
-}
+    //public void show() {
+      //  System.out.println(this);
+    }
+
