@@ -7,14 +7,10 @@ package zad1;
 
 public class Zbiornik {
 
-    private double pojemnosc = 0;
-    private double stanWody = 0;
+    private final double pojemnosc;
+    private double stanWody;
     private static int next = 0;
     private final int numer;
-
-    public Zbiornik() {
-        numer = ++next;
-    }
 
     public Zbiornik(double y, double x) {
         pojemnosc = y;
@@ -24,12 +20,6 @@ public class Zbiornik {
 
     public Zbiornik(double x) {
         this(x, 0);
-    }
-
-    public Zbiornik(Zbiornik z) {
-        pojemnosc = z.pojemnosc;
-        stanWody = z.stanWody;
-        numer = ++next;
     }
 
     public void dolej(double water) {

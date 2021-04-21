@@ -2,8 +2,8 @@ package zad2;
 
 public class BankCustomer {
 
-    private Account account = new Account();
-    private Person person;
+    private final Account account = new Account();
+    private final Person person;
 
     public BankCustomer(Person p) {
         person = p;

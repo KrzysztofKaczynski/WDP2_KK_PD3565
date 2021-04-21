@@ -8,10 +8,6 @@ package zad3;
 public class Appender {
     String src;
 
-    public Appender() {
-        src = "";
-    }
-
     public Appender(String s) {
         src = s;
     }
