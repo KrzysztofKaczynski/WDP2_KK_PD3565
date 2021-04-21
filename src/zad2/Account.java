@@ -12,15 +12,24 @@ public class Account {
     }
 
     public void deposit(double cash) {
+        if (cash <= 0.0) {
+            return;
+        }
+
         balance += cash;
     }
 
     public double withdraw(double cash) {
+        if (cash <= 0.0) {
+            return 0.0;
+        }
+
         if (cash > balance) {
             cash = balance;
         }
+
         balance -= cash;
-       return cash;
+        return cash;
     }
 
     public static void setInterestRate(double v) {
@@ -32,8 +41,6 @@ public class Account {
     }
 
     public void addInterest() {
-        balance = balance * (100 + interestRate) / 100;
+        balance = Math.max(0.0, balance * (100 + interestRate) / 100.0);
     }
-
-
 }
