@@ -7,6 +7,10 @@ public class Account {
     public Account() {
     }
 
+    public static void setInterestRate(double v) {
+        interestRate = v;
+    }
+
     public double getBalance() {
         return balance;
     }
@@ -30,10 +34,6 @@ public class Account {
 
         balance -= cash;
         return cash;
-    }
-
-    public static void setInterestRate(double v) {
-        interestRate = v;
     }
 
     public void transfer(Account p, double cash) {

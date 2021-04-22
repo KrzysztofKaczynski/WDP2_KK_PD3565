@@ -27,7 +27,6 @@ public class Zbiornik {
         if (stanWody > pojemnosc) {
             stanWody = pojemnosc;
         }
-
     }
 
     public void odlej(double water) {
